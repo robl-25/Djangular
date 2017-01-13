@@ -1,0 +1,39 @@
+<div>
+	<span ng-show="loading">loading...</span>
+
+	<li ng-if="auth.authenticated()">
+		<div ng-show="m.topicos.length > 0">
+			<div ng-repeat="topico in m.topicos">
+				<div ng-show="!m.identifica(topico.id)">
+					<button style="margin-top: 10px" class="btn btn-default" role="link" ng-click="m.goto_mensagens(topico.id, topico.name)">
+						<div>{{topico.name}}</div>
+						<button style="margin-top: 10px; margin-left: 50px" role="link" class="btn btn-info" ng-click="m.editar(topico.id, topico.name)">
+							Editar
+						</button>
+						<button style="margin-top: 10px; margin-left: 20px" role="link" class="btn btn-danger" ng-click="m.deletar(topico.id)">
+							Deletar
+						</button>
+					</button>
+				</div>
+				<div ng-show="m.identifica(topico.id)">
+					<input type="text" type="text" ng-model="m.topico_editado">
+					<button style="margin-top: 10px; margin-left: 50px" role="link" class="btn btn-success" ng-click="m.salvar_edicao()">
+						Salvar
+					</button>
+					<button style="margin-top: 10px; margin-left: 20px" role="link" class="btn btn-danger" ng-click="m.cancelar()">
+						Cancelar
+					</button>
+				</div>
+			</div>
+		</div>
+		<div ng-show="m.topicos.length <= 0">
+			<h1>Não existem topicos :(</h1>
+		</div>
+		<input id="" name="" placeholder="Digite o topico aqui" class="form-control input-md" type="text" ng-model="m.enviar_topico" style="margin-top: 50px; width: 30%">
+		<textarea class="form-control" rows="3" placeholder="Escreva a mensagem aqui" style="margin-top: 50px; width: 30%" ng-model="m.enviar_mensagem"></textarea>
+		<div style="margin-top: 50px">
+			<button  role="link" class="btn btn-success" ng-click="m.registrar()">Enviar</button>
+		</div>
+	</li>
+
+</div>

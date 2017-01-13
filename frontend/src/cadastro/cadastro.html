@@ -1,0 +1,68 @@
+<div>
+    <form class="form-horizontal">
+    <fieldset>
+
+    <!-- Form Name -->
+    <legend>Cadastro</legend>
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="">Nome</label>
+      <div class="col-md-4">
+      <input id="" name="" placeholder="Digite o seu nome" class="form-control input-md" type="text" ng-model="m.nome">
+
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="textinput">Email</label>
+      <div class="col-md-4">
+      <input id="textinput" name="textinput" placeholder="Digite o email" class="form-control input-md" type="text" ng-model="m.email">
+
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="">Usuário</label>
+      <div class="col-md-4">
+      <input id="" name="" placeholder="nome de usuário" class="form-control input-md" type="text" ng-model="m.username">
+      <!-- <span class="help-block">Nome Disponível</span> -->
+      </div>
+    </div>
+
+    <!-- Password input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="">Senha</label>
+      <div class="col-md-4">
+        <input id="" name="" placeholder="Digite uma Senha" class="form-control input-md" type="password" ng-model="m.password">
+
+      </div>
+    </div>
+
+    <!-- Multiple Radios -->
+    <div class="radio">
+      <label>
+        <input ng-model="m.tipo" type="radio" value="admin">
+        Administrador
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input ng-model="m.tipo" type="radio" value="aluno" checked>
+        Aluno
+      </label>
+    </div>
+
+    <!-- Button (Double) -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for=""></label>
+      <div class="col-md-8">
+        <button id="" name="" class="btn btn-success" ng-click="m.cadastro()">Cadastrar</button>
+        <button id="" name="" class="btn btn-danger">Cancelar</button>
+      </div>
+    </div>
+
+    </fieldset>
+    </form>
+</div>

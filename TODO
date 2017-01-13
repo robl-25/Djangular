@@ -1,0 +1,8 @@
+- Corrigir na hora de pegar o nome do topico em mensagens
+- Corrigir problema com migrate
+- Atualizar a lista((no angular) de topicos e mensagens
+- Colocar a opcao editar topicos
+- Problema com o hash gerado pra senha no cadastro
+
+*************MUITO IMPORTANTE****************
+- Fazer os testes unitarios

@@ -1,0 +1,38 @@
+<div style="">
+    <h2 ng-show="m.loading" style="">Carregando...</h2>
+<!-- <> -->
+    <div ng-show="m.id_topico > 0">
+        <h1 ng-show="!m.loading" style="">{{m.nome_topico}}</h1>
+        <h6 style="margin-top: 50px">
+            <h6 ng-show="m.mensagens.length <= 0" >Nenhuma mensagem =(</h6>
+                <p ng-show="m.mensagens.length > 0">
+                    <div ng-repeat="mensagem in m.mensagens">
+            		      <h4>
+                              {{mensagem.usuario_nome}}
+            		      </h4>
+                        <h6>
+                            <div>
+            			        {{mensagem.data}}
+                            </div>
+            			         {{mensagem.conteudo}}
+                                 <button style="margin-top: 50px" role="link" class="btn btn-danger" ng-click="m.deletar(mensagem.id, mensagem.id_usuario)">
+                                     Deletar
+                                 </button>
+            		      </h6>
+            	   </div>
+                </p>
+            </h6>
+
+            <textarea class="form-control" rows="3" placeholder="Escreva a mensagem aqui" style="margin-top: 50px; width: 30%" ng-model="m.enviar_mensagem"></textarea>
+            <div class="form-group">
+              <div class="col-md-8">
+                <button style="margin-top: 50px" role="link" class="btn btn-success" ng-click="m.registrar()">Enviar</button>
+              </div>
+          </div>
+      </div>
+
+      <div ng-show="m.id_topico < 0">
+          <h2>Tópico Inválido</h2>
+      </div>
+
+</div>
